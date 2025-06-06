@@ -7,7 +7,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import AddIcon from '@mui/icons-material/Add';
 import { IconButton, Box } from '@mui/material';
-import EmptyPlaylist from '../components/EmptyPlaylist';
+import EmptyPlaylist from './components/EmptyPlaylist';
+import Navbar from './components/Navbar';
 
 const Layout = styled('div')({
     display: 'flex',
@@ -98,7 +99,10 @@ const AppLayout = () => {
                 <EmptyPlaylist />
             </ContentBox>
         </SideBar>
-        <Outlet />
+        <ContentBox>
+            <Navbar/>
+            <Outlet />
+        </ContentBox>
     </Layout>
   )
 }
